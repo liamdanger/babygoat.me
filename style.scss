@@ -1,0 +1,69 @@
+body {
+  background-color: #17496b;
+  background-image: url("http://s.liamc.org/babygoat/bg.png");
+  background-repeat: repeat-all;
+  color: rgba(#fff, 0.6);
+
+  font-family: Helvetica;
+  font-size: 16px;
+  text-align: center;
+}
+
+.wrapper {
+  max-width: 800px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+h1 {
+  span.preamble {
+    color: rgba(#fff, 0.3);
+    font-size: 16px;
+    font-weight: normal;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.1);
+  }
+  span.title {
+    display: block;
+    font-size: 84px;
+    line-height: 84px;
+    color: #79bd9a;
+    text-shadow: 
+      0 2px #3b8686, 
+      0 4px darken(#3b8686, 2%), 
+      0 6px darken(#3b8686, 4%), 
+      0 8px darken(#3b8686, 6%), 
+      0 10px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  @media (max-width: 480px) {
+    span.title{
+      font-size: 36px;
+      line-height: 36px;
+      text-shadow: 
+        0 1px #3b8686, 
+        0 2px darken(#3b8686, 2%), 
+        0 3px darken(#3b8686, 4%), 
+        0 4px darken(#3b8686, 6%), 
+        0 5px 6px rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+.babygoat {
+  max-height: 100%;
+  max-width: 100%;
+  border: 5px solid #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+  margin-top: 20px;
+  padding-top: 20px;
+
+  font-size: 12px;
+  line-height: 18px;
+
+  p {
+    margin-bottom: 0;
+  }
+}

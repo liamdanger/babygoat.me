@@ -2,11 +2,15 @@ doctype html
 html
   head
     title babygoat.me
-    link(rel='stylesheet', href='/style.css')
+    link(rel='stylesheet', href='http://s.liamc.org/babygoat/style.css')
   body
-    header
-      h1 Oh my god it's a BABY GOAT
-    .container
-      img(src='#{babygoat}')
-    footer
-      p 
+    .wrapper
+      header
+        h1 
+          span.preamble Oh my god it's a 
+          span.title BABY GOAT
+      .container
+        img.babygoat(src='#{babygoat}')
+      footer
+        p Goat icon designed by fikri from the Noun Project
+        p A @liamdanger joint
