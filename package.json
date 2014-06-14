@@ -3,6 +3,7 @@
   "description": "Gets baby goats, is awesome",
   "version": "0.0.1",
   "private": true,
+  "main": "index.js",
   "dependencies": {
     "express": "4.4.3",
     "jade": "1.3.1",
