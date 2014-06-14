@@ -5,6 +5,7 @@ var express = require("express"),
     server;
 
 app.get("/", function(req, res) {
+  console.log("sending a goat");
   request("http://liamdanger.github.io/babygoat-motherlode/manifest.json", function(error, response, body) {
     var data = JSON.parse(body);
     var babygoats = data.babygoats;
