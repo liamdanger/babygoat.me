@@ -8,7 +8,7 @@ body {
   background-color: #17496b;
   color: rgba(#fff, 0.6);
 
-  font-family: Helvetica;
+  font-family: Helvetica, Arial;
   font-size: 12px;
   text-align: center;
 
@@ -39,6 +39,7 @@ h1 {
     display: block;
     font-size: 84px;
     line-height: 84px;
+    letter-spacing: -1px;
     color: #79bd9a;
     text-shadow: 
       0 1px #3b8686, 
@@ -54,32 +55,45 @@ h1 {
 
   @media (max-width: 480px) {
     span.title{
-      font-size: 36px;
-      line-height: 36px;
+      font-size: 44px;
+      line-height: 44px;
       text-shadow: 
         0 1px #3b8686, 
         0 2px darken(#3b8686, 1%), 
         0 3px darken(#3b8686, 2%), 
         0 4px darken(#3b8686, 3%), 
-        0 5px 6px rgba(0, 0, 0, 0.3);
+        0 5px darken(#3b8686, 4%), 
+        0 5px 12px rgba(0, 0, 0, 0.3);
     }
   }
 }
+
+$image-shadow: #c0c0c0;
 
 .babygoat {
   max-height: 100%;
   max-width: 100%;
   display: inline-block;
+  margin-bottom: 10px;
 
   img {
     border: 10px solid #fff;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 
+      0 1px 0 #eee,
+      0 2px 0 darken($image-shadow, 2%),
+      0 3px 0 darken($image-shadow, 4%),
+      0 4px 0 darken($image-shadow, 6%),
+      0 5px 0 darken($image-shadow, 8%),
+      0 6px 0 darken($image-shadow, 10%),
+      0 7px 0 darken($image-shadow, 12%),
+      0 8px 0 darken($image-shadow, 14%),
+      0 9px 0 darken($image-shadow, 16%),
+      0 9px 12px rgba(0, 0, 0, 0.3);
     max-width: 100%;
   }
   figcaption {
     font-size: 12px;
     line-height: 18px;
-    text-align: right;
     margin: 10px 0;
     a {
       color: rgba(#fff, 0.3);
@@ -90,11 +104,14 @@ h1 {
   }
 }
 
+$reload-button-color: #ed7f83;
+$reload-button-shadow: desaturate($reload-button-color, 15%);
+
 .reload-button {
   font-size: 16px;
   font-weight: bold;
   line-height: 16px;
-  background-color: #ed7f83;
+  background-color: $reload-button-color;
   color: rgba(#fff, 0.9);
   text-shadow: 0 1px rgba(0, 0, 0, 0.3);
   display: inline-block;
@@ -102,10 +119,24 @@ h1 {
   cursor: pointer;
   border-radius: 3px;
   -webkit-transition-property: background-color;
-  box-shadow: 0 1px 0 rgba(#000, 0.2);
-
+  box-shadow: 
+    0 1px 0 darken($reload-button-shadow, 15%),
+    0 2px 0 darken($reload-button-shadow, 16%),
+    0 3px 0 darken($reload-button-shadow, 17%),
+    0 4px 0 darken($reload-button-shadow, 18%),
+    0 4px 12px rgba(0, 0, 0, 0.3);
+    
   &:hover {
-    background-color: darken(#ed7f83, 5%);
+    background-color: darken(#ed7f83, 3%);
+  }
+  &:active {
+    position: relative;
+    margin-top: 2px;
+    margin-bottom: -2px;
+    box-shadow: 
+      0 1px 0 darken($reload-button-shadow, 15%),
+      0 2px 0 darken($reload-button-shadow, 16%),
+      0 2px 12px rgba(0, 0, 0, 0.3);
   }
 }
 

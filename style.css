@@ -6,7 +6,7 @@
 body {
   background-color: #17496b;
   color: rgba(255, 255, 255, 0.6);
-  font-family: Helvetica;
+  font-family: Helvetica, Arial;
   font-size: 12px;
   text-align: center;
   margin: 0; }
@@ -31,26 +31,27 @@ h1 {
     display: block;
     font-size: 84px;
     line-height: 84px;
+    letter-spacing: -1px;
     color: #79bd9a;
     text-shadow: 0 1px #3b8686, 0 2px #398282, 0 3px #387f7f, 0 4px #367b7b, 0 5px #357878, 0 6px #337474, 0 7px #327171, 0 8px #306d6d, 0 10px 12px rgba(0, 0, 0, 0.5); }
   @media (max-width: 480px) {
     h1 span.title {
-      font-size: 36px;
-      line-height: 36px;
-      text-shadow: 0 1px #3b8686, 0 2px #398282, 0 3px #387f7f, 0 4px #367b7b, 0 5px 6px rgba(0, 0, 0, 0.3); } }
+      font-size: 44px;
+      line-height: 44px;
+      text-shadow: 0 1px #3b8686, 0 2px #398282, 0 3px #387f7f, 0 4px #367b7b, 0 5px #357878, 0 5px 12px rgba(0, 0, 0, 0.3); } }
 
 .babygoat {
   max-height: 100%;
   max-width: 100%;
-  display: inline-block; }
+  display: inline-block;
+  margin-bottom: 10px; }
   .babygoat img {
     border: 10px solid #fff;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 0 #eeeeee, 0 2px 0 #bbbbbb, 0 3px 0 #b6b6b6, 0 4px 0 #b1b1b1, 0 5px 0 #acacac, 0 6px 0 #a7a7a7, 0 7px 0 #a1a1a1, 0 8px 0 #9c9c9c, 0 9px 0 #979797, 0 9px 12px rgba(0, 0, 0, 0.3);
     max-width: 100%; }
   .babygoat figcaption {
     font-size: 12px;
     line-height: 18px;
-    text-align: right;
     margin: 10px 0; }
     .babygoat figcaption a {
       color: rgba(255, 255, 255, 0.3); }
@@ -69,9 +70,14 @@ h1 {
   cursor: pointer;
   border-radius: 3px;
   -webkit-transition-property: background-color;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 1px 0 #d34d52, 0 2px 0 #d2494e, 0 3px 0 #d1444a, 0 4px 0 #d04046, 0 4px 12px rgba(0, 0, 0, 0.3); }
   .reload-button:hover {
-    background-color: #ea696d; }
+    background-color: #eb7276; }
+  .reload-button:active {
+    position: relative;
+    margin-top: 2px;
+    margin-bottom: -2px;
+    box-shadow: 0 1px 0 #d34d52, 0 2px 0 #d2494e, 0 2px 12px rgba(0, 0, 0, 0.3); }
 
 footer {
   color: rgba(255, 255, 255, 0.2);
