@@ -12,8 +12,8 @@ app.get("/", function(req, res) {
     var howManyGoats = babygoats.length;
     var whichGoat = Math.floor(Math.random() * (howManyGoats));
     res.render("index.jade", {
-      image: babygoats[whichGoat],
-      source: "http://google.com"
+      image: babygoats[whichGoat].image,
+      source: babygoats[whichGoat].source
     });
   });
 });
