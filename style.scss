@@ -17,6 +17,8 @@ body {
 
 a {
   color: #5bc39c;
+  -webkit-transition-property: color;
+  -webkit-transition-duration: 0.2s;
 }
 
 .wrapper {
@@ -81,6 +83,9 @@ h1 {
     margin: 10px 0;
     a {
       color: rgba(#fff, 0.3);
+      &:hover {
+        color: rgba(#fff, 0.5);
+      }
     }
   }
 }
@@ -96,16 +101,16 @@ h1 {
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 3px;
+  -webkit-transition-property: background-color;
+  box-shadow: 0 1px 0 rgba(#000, 0.2);
 
   &:hover {
     background-color: darken(#ed7f83, 5%);
   }
-  &:active {
-    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
-  }
 }
 
 footer {
+  color: rgba(#fff, 0.2);
   margin-top: 20px;
   padding-top: 20px;
 
@@ -114,5 +119,11 @@ footer {
 
   p {
     margin-bottom: 0;
+  }
+  a {
+    color: rgba(#fff, 0.3);
+    &:hover {
+      color: rgba(#fff, 0.5);
+    }
   }
 }
