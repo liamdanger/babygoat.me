@@ -10,8 +10,11 @@ app.get("/", function(req, res) {
     var data = JSON.parse(body);
     var babygoats = data.babygoats;
     var howManyGoats = babygoats.length;
-    var whichGoat = Math.floor(Math.ratrandom() * (howManyGoats));
-    res.render("index.jade", {babygoat: babygoats[whichGoat]});
+    var whichGoat = Math.floor(Math.random() * (howManyGoats));
+    res.render("index.jade", {
+      image: babygoats[whichGoat],
+      source: "http://google.com"
+    });
   });
 });
 
